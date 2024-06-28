@@ -81,8 +81,15 @@ class JokesTab extends StatelessWidget {
                     ),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      IconButton(
+                          onPressed: () {
+                            String joke =
+                                providerFalse.jokesModel.jokes.toString();
+                            // providerFalse.share(joke);
+                          },
+                          icon: Icon(Icons.share, color: Colors.white)),
                       IconButton(
                           onPressed: () {
                             providerFalse.saveFavourites();
@@ -94,7 +101,7 @@ class JokesTab extends StatelessWidget {
                             color: providerTrue.isFavourite
                                 ? Colors.red
                                 : Colors.white,
-                          ))
+                          )),
                     ],
                   )
                 ]),

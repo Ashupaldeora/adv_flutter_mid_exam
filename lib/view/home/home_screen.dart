@@ -2,6 +2,7 @@ import 'package:adv_flutter_mid_exam/controller/data_provider.dart';
 import 'package:adv_flutter_mid_exam/view/home/components/favourite_tab.dart';
 import 'package:adv_flutter_mid_exam/view/home/components/jokes_tab.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -18,10 +19,13 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 80,
           backgroundColor: Colors.transparent,
-          title: Text(
-            "Jokes App",
-            style: TextStyle(color: Colors.white),
-          ),
+          title: Text("Jokes App",
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+              )),
           centerTitle: true,
           bottom: PreferredSize(
             preferredSize: Size.fromHeight(50),
@@ -29,14 +33,20 @@ class HomeScreen extends StatelessWidget {
                 dividerColor: Colors.transparent,
                 indicatorColor: Colors.deepOrange,
                 tabs: [
-                  Text(
-                    "Joke",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    "Favourite Joke",
-                    style: TextStyle(color: Colors.white),
-                  ),
+                  Text("Joke",
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                          color: Colors.white,
+                          // fontSize: 28,
+                        ),
+                      )),
+                  Text("Favourite Joke",
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                          color: Colors.white,
+                          // fontSize: 28,
+                        ),
+                      )),
                 ]),
           ),
         ),

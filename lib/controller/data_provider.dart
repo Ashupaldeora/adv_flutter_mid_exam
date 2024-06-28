@@ -1,5 +1,6 @@
 import 'package:adv_flutter_mid_exam/api/api_services.dart';
 import 'package:flutter/material.dart';
+// import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/jokes.dart';
@@ -31,6 +32,10 @@ class DataProvider extends ChangeNotifier {
     updateIsFavourite();
     notifyListeners();
   }
+
+  // void share(String joke) {
+  //   Share.share(joke, subject: 'Look I Found a Joke!');
+  // }
 
   Future<void> removeFavourite(int index) async {
     favouriteJokes.removeAt(index);
